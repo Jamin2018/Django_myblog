@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/basecss.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+<div class="pg-left">
+    <div class="logo">Jamin</div>
+    <div class="logo-1">Thoughts,stories and ideas</div>
+    <div class="left-item">
+        <div class="left-item-title">首页</div>
+        <div class="left-item-title">关于</div>
+        <div class="left-item-title">联系</div>
+    </div>
+</div>
+
+
+<div class="pg-edit">
+    {% if post %}
+    <form method="post" action="/edit_b/">
+        <div style="display: none"><input type="text" name="nid" value="{{ post.id }}"></div>
+        <div class="pg-edit-title ">标题</div>
+        <div class="pg-edit-title"><input type="text" class="form-control" name="title" placeholder="文章标题" value="{{ post.title }}"></div>
+        <div class="pg-edit-title">简介</div>
+        <div class="pg-edit-title"><textarea  class="form-control" name="profile"  placeholder="文章简介">{{ post.profile }}</textarea></div>
+        <div class="pg-edit-title">内容</div>
+        <div class="pg-edit-title"><textarea  class="" id="kindedit" name="content">{{ post.content }}</textarea></div>
+        <input type="submit" value="提交">
+    </form>
+    {% else %}
+    <form method="post" action="/edit/">
+        <div class="pg-edit-title ">标题</div>
+        <div class="pg-edit-title"><input type="text" class="form-control" name="title" placeholder="文章标题"></div>
+        <div class="pg-edit-title">简介</div>
+        <div class="pg-edit-title"><textarea  class="form-control" name="profile"  placeholder="文章简介"></textarea></div>
+        <div class="pg-edit-title">内容</div>
+        <div class="pg-edit-title"><textarea  class="" id="kindedit" name="content"></textarea></div>
+        <input type="submit" value="提交">
+    </form>
+    {% endif %}
+</div>
+
+<script src="/static/jquery-1.12.4.js"></script>
+<script src="/static/kindeditor/kindeditor-all.js"></script>
+<script>
+    $(function () {
+        KindEditor.create('#kindedit',{
+            width:800,
+            height:200,
+            resizeType: 0,
+            autoHeightMode : true,
+            filterMode : false,
+        });
+    })
+</script>
+
+</body>
+</html>

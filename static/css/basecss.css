@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-image: url(/static/image/paoche.jpg);
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.pg-left{
+    position: absolute;
+    width: 150px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-right: 1px solid #99999940;
+    text-align: center;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.logo-1{
+    font-size: 12px;
+    color: #999999;
+    margin: 10px 20px;
+}
+.left-item{
+    color: #777;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 30px;
+    border-bottom: 1px solid  #99999940 ;
+}
+.left-item-title{
+    padding: 5px;
+}
+.row_hide{
+    position: absolute;
+    margin-left: 150px;
+    width: 300px;
+    bottom: 0;
+    top:0;
+    overflow: hidden;
+    border-right: 1px solid #99999940;
+}
+
+.pg-middle{
+    position: absolute;
+    width: 330px;
+    bottom: 0;
+    top:0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.pg-middle-item{
+    width: 300px;
+    padding: 20px 15px;
+    border-bottom: 1px solid #99999940;
+}
+.pg-middle-item li{
+    font-size: 12px;
+    color: black;
+}
+.pg-middle-title{
+    font-size: 16px;
+    border-bottom: 1px solid #a9a9a9;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.pg-middle-foo{
+    color: #a9a9a9;
+    font-size: 14px;
+     width: 270px;
+    padding: 20px 15px;
+}
+.pg-middle-time{
+    float: left;
+}
+.pg-middle-item-s{
+border: 2px solid #777777;
+}
+.pg-middle-label{
+    float: right;
+    margin-right: 20px;
+}
+.pg-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 450px;
+    overflow: auto;
+}
+.content-border{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+}
+.content{
+
+}
+.content-hide{
+    overflow: auto;
+}
+.pg-edit{
+    position: absolute;
+    margin-left: 150px;
+    width: 1000px;
+    bottom: 0;
+    top:0;
+    border-right: 1px solid #99999940;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 100px;
+}
+.pg-edit-title{
+    margin: 10px 0;
+}
+.hide{
+    display: none;
+}
+
+.pg-hide{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+}
